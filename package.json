@@ -8,6 +8,7 @@
   },
   "author": "hassan",
   "license": "ISC",
+  "type": "module",
   "dependencies": {
     "@ethereumjs/tx": "^3.5.2",
     "web3": "^1.7.5"
