@@ -19,6 +19,21 @@ const contractAddress = "0xdAC17F958D2ee523a2206206994597C13D831ec7";
 const contractABI = json;
 const dapptokenContract = new web3.eth.Contract(contractABI, contractAddress);
 
+/* 
+    we can get access to smart contract recent events by using following method
+*/
+/* 
+dapptokenContract.getPastEvents(
+  "Transfer",
+  {
+    fromBlock: 532342,
+    toBlock: "latest",
+  },
+  (err, txHash) => {
+    console.log(txHash);
+  }
+); */
+
 // data to be written in smart contracts.
 const data = dapptokenContract.methods.transfer(account2, 1000).encodeABI();
 
